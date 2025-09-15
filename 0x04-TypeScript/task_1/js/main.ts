@@ -34,13 +34,15 @@ const director1: Directors = {
 
 console.log(director1);
 
-interface printTeacherFunction {
+// 1️⃣ Define the interface for the function type
+export interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
-export function printTeacher(firstName: string, lastName: string): string {
+// 2️⃣ Implement the function using that interface
+export const printTeacher: printTeacherFunction = function (
+  firstName: string,
+  lastName: string
+): string {
   return `${firstName.charAt(0)}. ${lastName}`;
-}
-
-// Example
-printTeacher("John", "Doe"); // → "J. Doe"
+};
