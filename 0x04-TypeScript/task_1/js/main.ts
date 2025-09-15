@@ -18,3 +18,29 @@ const teacher3: Teacher = {
 };
 
 console.log(teacher3);
+// ✅ New Directors interface that EXTENDS Teacher
+interface Directors extends Teacher {
+  numberOfReports: number; // required
+}
+
+// Example usage
+const director1: Directors = {
+  firstName: "John",
+  lastName: "Doe",
+  location: "London",
+  fullTimeEmployee: true,
+  numberOfReports: 17,
+};
+
+console.log(director1);
+
+interface printTeacherFunction {
+  (firstName: string, lastName: string): string;
+}
+
+const printTeacher: printTeacherFunction = (firstName, lastName) => {
+  return `${firstName.charAt(0)}. ${lastName}`;
+};
+
+console.log(printTeacher("John", "Doe")); // 👉 J. Doe
+console.log(printTeacher("Alice", "Smith")); // 👉 A. Smith
