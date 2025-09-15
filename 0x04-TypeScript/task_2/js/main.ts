@@ -49,7 +49,7 @@ console.log(createEmployee(500)); // Director
 // String literal type
 export type Subjects = "Math" | "History";
 
-// Function teachClass
+// Function with explicit Subjects type
 export function teachClass(todayClass: Subjects): string {
   if (todayClass === "Math") {
     return "Teaching Math";
