@@ -2,8 +2,10 @@
 
 /// <reference path="./interface.ts" />
 
-import { RowID, RowElement } from "./interface";
+// task_3/js/crud.d.ts
 
-export declare function insertRow(row: RowElement): RowID;
-export declare function deleteRow(rowId: RowID): void;
-export declare function updateRow(rowId: RowID, row: RowElement): RowID;
+import { RowElement } from "./interface";
+
+declare function insertRow(row: RowElement): number;
+declare function deleteRow(rowId: number): void;
+declare function updateRow(rowId: number, row: RowElement): number;
