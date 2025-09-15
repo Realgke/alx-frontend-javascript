@@ -25,7 +25,7 @@ interface StudentClassInterface {
 }
 
 // ✅ Class StudentClass with required methods
-class StudentClass implements StudentClassInterface {
+class StudentClass {
   firstName: string;
   lastName: string;
 
